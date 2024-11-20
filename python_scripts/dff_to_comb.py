@@ -4,7 +4,7 @@
 import re
 PI = []
 PO = []
-with open("../../verilog/s9234.v", "r") as file:
+with open("../verilog/s9234.v", "r") as file:
         for line in file:
             match = re.search(r"\s+dff\s+(\w+)\((\w+),\w+,(\w+)\);\s+", line)
             if match:
@@ -14,7 +14,7 @@ with open("../../verilog/s9234.v", "r") as file:
                 PI.append(flip_flop_q)
                 PO.append(flip_flop_data)
 
-with open("new_PIs_POs", "w") as file:
+with open("combo_inputs_outputs", "w") as file:
     file.write("Inputs:\n")
     for PI_index in range(len(PI)):
         file.write(PI[PI_index])

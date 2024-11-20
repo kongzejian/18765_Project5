@@ -3,7 +3,7 @@
 
 import re
 all_flip_flops = []
-with open("../../verilog/s9234.v", "r") as file:
+with open("../verilog/s9234.v", "r") as file:
     for line in file:
         match = re.search(r"\s+dff\s+(\w+)\((\w+),\w+,(\w+)\);\s+", line)
         if match:
