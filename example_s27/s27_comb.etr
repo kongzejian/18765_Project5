@@ -1,0 +1,24 @@
+EASY-TO-READ ** do not remove, file type detection
+-- s27_comb.etr --
+Initial input: s27_comb_tests.ascii
+Converted from ascii to easy-to-read
+8 vectors in file
+0 clock signals present
+7 input signals present (not including clocks)
+4 output signals preset
+
+INPUTS: G0, G1, G2, G3, G5, G6, G7
+OUTPUTS: G17, G10, G11, G13
+Ordering of signals corresponds to order of bits in test vector
+
+
+#	IN     	OUT
+1:	1101010	1101
+2:	1001001	1101
+3:	0000110	1000
+4:	1110010	1100
+5:	0010010	0010
+6:	0010000	1000
+7:	1001000	0010
+8:	0111011	0010
+

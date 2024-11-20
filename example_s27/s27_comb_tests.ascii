@@ -1,0 +1,72 @@
+//
+//  Tessent Shell  2024.1
+//
+//  Design  = s27_comb.v
+//  Created = Tue Nov 19 16:46:04 EST 2024
+//
+//  Statistics:
+//      Test Coverage   =  100.00%
+//      Total Faults    =  78
+//          DS (det_simulation)    =  78
+//      Total            Patterns  =  8
+//
+//  Settings:
+//      Simulation Mode =  combinational, seq_depth = 0
+//      Fault Type      =  stuck
+//      Fault Mode      =  uncollapsed
+//      Pos_Det Credit  =  50%
+//      Z external      =  X
+//      Z internal      =  X
+//      wired_net       =  WIRE
+//
+//  Warnings:
+//
+
+ASCII_PATTERN_FILE_VERSION = 3;
+
+
+SETUP = 
+
+    declare input bus "PI" = "/G0", "/G1", "/G2", "/G3", "/G5",
+         "/G6", "/G7";
+
+    declare output bus "PO" = "/G17", "/G10", "/G11", "/G13";
+
+end;
+
+SCAN_TEST =
+
+    pattern = 0;
+    force   "PI" "1101010" 0;
+    measure "PO" "1101" 1;
+
+    pattern = 1;
+    force   "PI" "1001001" 0;
+    measure "PO" "1101" 1;
+
+    pattern = 2;
+    force   "PI" "0000110" 0;
+    measure "PO" "1000" 1;
+
+    pattern = 3;
+    force   "PI" "1110010" 0;
+    measure "PO" "1100" 1;
+
+    pattern = 4;
+    force   "PI" "0010010" 0;
+    measure "PO" "0010" 1;
+
+    pattern = 5;
+    force   "PI" "0010000" 0;
+    measure "PO" "1000" 1;
+
+    pattern = 6;
+    force   "PI" "1001000" 0;
+    measure "PO" "0010" 1;
+
+    pattern = 7;
+    force   "PI" "0111011" 0;
+    measure "PO" "0010" 1;
+
+end;
+
