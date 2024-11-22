@@ -1,0 +1,8 @@
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/TAP.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/Top.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/boundary_cell.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/instruction_decode.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/instruction_register.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/library.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/s9234_scan.v
+/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/top_tb.v

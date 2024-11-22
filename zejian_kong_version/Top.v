@@ -19,6 +19,7 @@ module Top(
   wire ir1, ir2, bypass_en, boundary_scan_en, internal_scan_en;
   wire bypass_tdo, boundary_scan_tdo, internal_scan_tdo, instruction_register_tdo, test_data_registers_tdo, tdo_mux;
   wire clockdr_bs, updatedr_bs, shiftdr_bs;
+  wire shift_interal_scan, shift_by_pass;
   wire boundary_cell_tdi,boundary_cell_1_tdo,boundary_cell_2_tdo,boundary_cell_3_tdo,boundary_cell_4_tdo,boundary_cell_5_tdo,
   boundary_cell_6_tdo,boundary_cell_7_tdo,boundary_cell_8_tdo,boundary_cell_9_tdo,boundary_cell_10_tdo,boundary_cell_11_tdo,
   boundary_cell_12_tdo,boundary_cell_13_tdo,boundary_cell_14_tdo,boundary_cell_15_tdo,boundary_cell_16_tdo,boundary_cell_17_tdo,
@@ -36,11 +37,14 @@ module Top(
   and AND_1(clockdr_bs, clockdr, boundary_scan_en);
   and AND_2(updatedr_bs, updatedr, boundary_scan_en);
   and AND_3(shiftdr_bs, shiftdr, boundary_scan_en);
+  and AND_4(shift_interal_scan, shiftdr, internal_scan_en);
+  and AND_5(shift_by_pass, shiftdr, bypass_en);
+
 
   tapcontroller u_tapcontroller(TCK, TRST, TMS, clockdr, shiftdr, updatedr, clockir,shiftir, updateir, select, bs_en);
   instruction_register u_nstruction_register(clockir, shiftir, updateir, TDI, instruction_register_tdo, ir1, ir2);
   instruction_decoder u_instruction_decoder(ir1, ir2, bypass_en, boundary_scan_en, internal_scan_en);
-  scanff Bypass_Reg(TCK, 1'b0, TDI, bypass_en, bypass_tdo);
+  scanff Bypass_Reg(TCK, 1'b0, TDI, shift_by_pass, bypass_tdo);
   MUX_4_to_1 u_MUX_4_to_1(ir1, ir2, bypass_tdo, boundary_scan_tdo, internal_scan_tdo, test_data_registers_tdo);
   u_mux2 MUX2_2(tdo_mux, test_data_registers_tdo, instruction_register_tdo, select);
   dff DFF_1(out1, TCK, TDO);
@@ -57,7 +61,7 @@ module Top(
   g4104,g4105,g4106,g4107,g4108,g4109,g4110,g4112,g4121,g42,g4307,g4321,g44,
   g4422,g45,g46,g47,g4809,g5137,g5468,g5469,g557,g558,g559,g560,g561,g562,g563,
   g564,g567,g5692,g6282,g6284,g6360,g6362,g6364,g6366,g6368,g6370,g6372,g6374,
-  g639,g6728,g702,g705,g89,g94,g98,internal_scan_en,TDI,internal_scan_tdo);
+  g639,g6728,g702,g705,g89,g94,g98,internal_scan,TDI,internal_scan_tdo);
 
   boundary_cell boundary_cell_1(g89_in, boundary_cell_tdi, clockdr_bs, updatedr_bs, boundary_cell_1_tdo, shiftdr_bs, bs_en, g89);
   boundary_cell boundary_cell_2(g94_in, boundary_cell_1_tdo, clockdr_bs, updatedr_bs, boundary_cell_2_tdo, shiftdr_bs, bs_en, g94);
@@ -139,13 +143,3 @@ module Top(
 endmodule
 
 
-module MUX_4_to_1(
-  ir1, ir2, bypass_tdo, boundary_scan_tdo, internal_scan_tdo, TDO
-);
-  input ir1, ir2, bypass_tdo, boundary_scan_tdo, internal_scan_tdo;
-  output TDO;
-  wire mux_out1, mux_out2;
-  u_mux2 MUX2_1(mux_out1, 1'b0, boundary_scan_tdo, ir1); //out, in0, in1, select
-  u_mux2 MUX2_2(mux_out2, bypass_tdo, internal_scan_tdo, ir1);
-  u_mux2 MUX2_3(TDO, mux_out1, mux_out2, ir2);
-endmodule

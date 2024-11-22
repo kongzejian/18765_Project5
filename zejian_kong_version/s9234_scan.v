@@ -6314,45 +6314,6 @@ scanff DFF_210(CK, g6585, g1, scan_en, g59);
 
 endmodule
 
-`celldefine
-module scanff(CK, D, SI, SE, Q);
-   input CK, D, SI, SE;
-   output Q;
-   wire   a;
-   dff  (Q, CK, a);
-   u_mux2  (a, D, SI, SE);
-
-endmodule // scanff
-`endcelldefine
 
 
-module u_mux2(out, in0, in1, sel);
-   output out;
-   input in0, in1, sel;
 
-   wire  nsel, w1, w0;
-   not NOT0(nsel, sel);
-
-   and AND0(w0, nsel, in0);
-   and AND1(w1, sel, in1);
-
-   or OR0(out, w1, w0);
-endmodule // u_mux2
-
-primitive dff(q, clock, data);
-   output q; reg q;
-   input  clock, data;
-
-   table
-      // obtain output on rising edge of clock
-      // clock data q q+
-      (01) 0 : ? : 0 ;
-      (01) 1 : ? : 1 ;
-      (0?) 1 : 1 : 1 ;
-      (0?) 0 : 0 : 0 ;
-      // ignore negative edge of clock
-      F ? : ? : - ;
-      // ignore data changes on steady clock
-      ? (??) : ? : - ;
-   endtable
-endprimitive // dff
