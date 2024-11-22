@@ -1,9 +1,0 @@
-#!/bin/sh -h 
-PYTHONHOME=/afs/ece/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/etc/search/pyh
-export PYTHONHOME
-PYTHONPATH=/afs/ece/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/pylib27
-export PYTHONPATH
-LD_LIBRARY_PATH=/afs/ece/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib:/afs/ece/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/pylib27
-export LD_LIBRARY_PATH
-/afs/ece/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/bin/vcsfind_create_index.exe  -z  "/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/simv.daidir/debug_dump/fsearch/./idents_3wuX8J.xml.gz" -o "/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
-\mv "/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/simv.daidir/debug_dump/fsearch/fsearch.db"
