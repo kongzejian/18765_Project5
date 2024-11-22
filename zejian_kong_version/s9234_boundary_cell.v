@@ -61,6 +61,7 @@ CK,scan_in,scan_en,scan_out
     g639,g6728,g702,g705,g89,g94,g98,scan_en, scan_in,scan_out);
 
 
+
     boundary_cell boundary_cell_1(g89_in, boundary_cell_tdi, CK, Update, boundary_cell_1_tdo, Shift_or_Load, Test_or_Normal, g89);
     boundary_cell boundary_cell_2(g94_in, boundary_cell_1_tdo, CK, Update, boundary_cell_2_tdo, Shift_or_Load, Test_or_Normal, g94);
     boundary_cell boundary_cell_3(g98_in, boundary_cell_2_tdo, CK, Update, boundary_cell_3_tdo, Shift_or_Load, Test_or_Normal, g98);
@@ -139,3 +140,6 @@ CK,scan_in,scan_en,scan_out
 
 
 endmodule
+
+
+

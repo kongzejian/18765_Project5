@@ -1,7 +1,7 @@
 set_context pattern -scan
 
 # read the verilog file and define the top-level module
-read_verilog ../verilog/s9234_comb.v
+read_verilog s9234_comb.v
 set_current_design s9234_comb
 
 # put Tessent into pattern generation mode

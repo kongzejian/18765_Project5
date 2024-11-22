@@ -499,7 +499,7 @@ module s9234_scan(CK,scan_in, scan_out, scan_en, g102,g107,g1290,g1293,g22,g23,g
   g3647,g1449,g1418,g1879;
 
 
-  scanff DFF_0(CK, g4130, scan_in, scan_en, g678);
+scanff DFF_0(CK, g4130, scan_in, scan_en, g678);
 scanff DFF_1(CK, g6823, g678, scan_en, g332);
 scanff DFF_2(CK, g6940, g332, scan_en, g123);
 scanff DFF_3(CK, g6102, g123, scan_en, g207);
