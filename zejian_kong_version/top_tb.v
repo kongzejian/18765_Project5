@@ -50,23 +50,24 @@ module top_tb;
     #10 TMS = 0; 
     #10 TMS = 1;
     #10 TMS = 1; 
-    #10 TMS = 0 TDI = 0;  //shift ir
-    #10 TDI = 1;
-    #10 TMS = 1
-    #10 TMS = 1;
-    #10 TMS = 1;
     #10 TMS = 0;
-    #10 TMS = 0; // shift dr
-    #10 TDI = 1;
-    #10 TDI = 0;
-    #10 TDI = 0;
-    #10 TDI = 1;
-    #10 TMS = 1;
-    #10 TMS = 1;
-    #10 TMS = 1;
-
-    // Finish simulation
-    #50 $finish;
+    #10 TMS = 0;TDI = 1; //shift ir
+    #10 TMS = 0;
+    #5 TDI = 0; //shift ir
+    #5 TMS = 1; //exit ir
+    #10 TMS = 1; // update ir
+    #10 TMS = 1; //select dr
+    #10 TMS = 0; //capture dr
+    #10 TMS = 0;TDI = 1; //shiftDR
+    #10 TMS = 0;TDI = 0; //shiftDR
+    #10 TMS = 0;TDI = 0; //shiftDR
+    #10 TMS = 0;TDI = 1;//shiftDR
+    #10 TMS = 0;TDI = 1; //shiftDR
+    #10 TMS = 1; // exit1 dr
+    #10 TMS = 1; // update dr
+    #10 TMS = 1; //select dr
+    $display("bypass verification completed");
+    $finish;
   end
 
 endmodule

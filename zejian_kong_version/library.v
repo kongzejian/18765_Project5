@@ -22,8 +22,9 @@ module scanff(CK, D, SI, SE, Q);
    input CK, D, SI, SE;
    output Q;
    wire   a;
-   dff  (Q, CK, a);
-   u_mux2  (a, D, SI, SE);
+
+   dff u_dff(Q, CK, a);
+   u_mux2 u_mux(a, D, SI, SE);
 
 endmodule // scanff
 
