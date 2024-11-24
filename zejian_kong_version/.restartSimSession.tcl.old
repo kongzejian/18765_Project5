@@ -1,22 +1,31 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Fri Nov 22 22:13:22 2024
+# Saved on Sat Nov 23 21:03:43 2024
 # Designs open: 1
 #   Sim: /afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/simv
-# Toplevel windows open: 4
+# Toplevel windows open: 3
 # 	TopLevel.1
 # 	TopLevel.2
 # 	TopLevel.3
-# 	TopLevel.4
 #   Source.1: top_tb
-#   Wave.1: 31 signals
-#   Wave.2: 54 signals
-#   Wave.3: 6 signals
-#   Group count = 4
-#   Group Group1 signal count = 9
-#   Group Group2 signal count = 31
-#   Group Group3 signal count = 54
-#   Group Group4 signal count = 6
+#   Wave.1: 39 signals
+#   Wave.2: 6 signals
+#   Group count = 15
+#   Group Group1 signal count = 7
+#   Group Group2 signal count = 37
+#   Group Group3 signal count = 11
+#   Group Group4 signal count = 7
+#   Group Group5 signal count = 7
+#   Group Group6 signal count = 7
+#   Group Group7 signal count = 7
+#   Group Group8 signal count = 1
+#   Group Group9 signal count = 1
+#   Group Group10 signal count = 1
+#   Group Group11 signal count = 1
+#   Group Group12 signal count = 39
+#   Group Group13 signal count = 6
+#   Group Group14 signal count = 6
+#   Group Group15 signal count = 6
 # End_DVE_Session_Save_Info
 
 # DVE version: T-2022.06_Full64
@@ -66,7 +75,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 538} {child_wave_right 1312} {child_wave_colname 270} {child_wave_colvalue 264} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 536} {child_wave_right 1308} {child_wave_colname 350} {child_wave_colvalue 182} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -80,21 +89,7 @@ gui_sync_global -id ${TopLevel.3} -option true
 
 # MDI window settings
 set Wave.2 Wave.2
-gui_update_layout -id ${Wave.2} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 538} {child_wave_right 1312} {child_wave_colname 270} {child_wave_colvalue 264} {child_wave_col1 0} {child_wave_col2 1}}
-
-# End MDI window settings
-
-
-# Create and position top-level window: TopLevel.4
-
-set TopLevel.4 TopLevel.4
-
-# Docked window settings
-gui_sync_global -id ${TopLevel.4} -option true
-
-# MDI window settings
-set Wave.3 Wave.3
-gui_update_layout -id ${Wave.3} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 538} {child_wave_right 1312} {child_wave_colname 270} {child_wave_colvalue 263} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.2} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 536} {child_wave_right 1306} {child_wave_colname 266} {child_wave_colvalue 266} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -121,35 +116,104 @@ gui_set_time_units 1s
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {top_tb.uut.u_nstruction_register.DFF_0}
+gui_load_child_values {top_tb.uut.s9234_scan_u.DFF_210}
+gui_load_child_values {top_tb.uut.s9234_scan_u.DFF_0}
+gui_load_child_values {top_tb.uut.boundary_cell_1.mux_1}
+gui_load_child_values {top_tb.uut.boundary_cell_1.mux_2}
 gui_load_child_values {top_tb.uut}
-gui_load_child_values {top_tb.uut.u_nstruction_register}
-gui_load_child_values {top_tb.uut.u_tapcontroller}
+gui_load_child_values {top_tb.uut.s9234_scan_u}
+gui_load_child_values {top_tb.uut.boundary_cell_1}
 
 
-set _session_group_6 Group1
-gui_sg_create "$_session_group_6"
-set Group1 "$_session_group_6"
+set _session_group_137 Group1
+gui_sg_create "$_session_group_137"
+set Group1 "$_session_group_137"
 
-gui_sg_addsignal -group "$_session_group_6" { top_tb.uut.u_nstruction_register.clockir top_tb.uut.u_nstruction_register.shiftir top_tb.uut.u_nstruction_register.updateir top_tb.uut.u_nstruction_register.tdi top_tb.uut.u_nstruction_register.tdo top_tb.uut.u_nstruction_register.out1 top_tb.uut.u_nstruction_register.out2 top_tb.uut.u_nstruction_register.q1 top_tb.uut.u_nstruction_register.clockir_and_shiftir }
+gui_sg_addsignal -group "$_session_group_137" { top_tb.uut.boundary_cell_1.mux_1.out top_tb.uut.boundary_cell_1.mux_1.in0 top_tb.uut.boundary_cell_1.mux_1.in1 top_tb.uut.boundary_cell_1.mux_1.sel top_tb.uut.boundary_cell_1.mux_1.nsel top_tb.uut.boundary_cell_1.mux_1.w1 top_tb.uut.boundary_cell_1.mux_1.w0 }
 
-set _session_group_7 Group2
-gui_sg_create "$_session_group_7"
-set Group2 "$_session_group_7"
+set _session_group_138 Group2
+gui_sg_create "$_session_group_138"
+set Group2 "$_session_group_138"
 
-gui_sg_addsignal -group "$_session_group_7" { top_tb.uut.CK top_tb.uut.TDI top_tb.uut.TMS top_tb.uut.TCK top_tb.uut.TRST top_tb.uut.TDO top_tb.uut.clockdr top_tb.uut.shiftdr top_tb.uut.updatedr top_tb.uut.clockir top_tb.uut.shiftir top_tb.uut.updateir top_tb.uut.select top_tb.uut.bs_en top_tb.uut.ir1 top_tb.uut.ir2 top_tb.uut.bypass_en top_tb.uut.boundary_scan_en top_tb.uut.internal_scan_en top_tb.uut.bypass_tdo top_tb.uut.boundary_scan_tdo top_tb.uut.internal_scan_tdo top_tb.uut.instruction_register_tdo top_tb.uut.test_data_registers_tdo top_tb.uut.tdo_mux top_tb.uut.clockdr_bs top_tb.uut.updatedr_bs top_tb.uut.shiftdr_bs top_tb.uut.shift_interal_scan top_tb.uut.by_pass_TCK top_tb.uut.internal_scan }
+gui_sg_addsignal -group "$_session_group_138" { top_tb.uut.CK top_tb.uut.TDI top_tb.uut.TMS top_tb.uut.TCK top_tb.uut.TRST top_tb.uut.TDO top_tb.uut.clockdr top_tb.uut.shiftdr top_tb.uut.updatedr top_tb.uut.clockir top_tb.uut.shiftir top_tb.uut.updateir top_tb.uut.select top_tb.uut.bs_en top_tb.uut.ir1 top_tb.uut.ir2 top_tb.uut.bypass_en top_tb.uut.boundary_scan_en top_tb.uut.internal_scan_en top_tb.uut.bypass_tdo top_tb.uut.boundary_scan_tdo top_tb.uut.internal_scan_tdo top_tb.uut.instruction_register_tdo top_tb.uut.test_data_registers_tdo top_tb.uut.tdo_mux top_tb.uut.clockdr_bs top_tb.uut.updatedr_bs top_tb.uut.shiftdr_bs top_tb.uut.shift_interal_scan top_tb.uut.by_pass_TCK top_tb.uut.boundary_cell_1_tdo top_tb.uut.boundary_cell_69_tdo top_tb.uut.boundary_cell_70_tdo top_tb.uut.boundary_cell_71_tdo top_tb.uut.boundary_cell_72_tdo top_tb.uut.boundary_cell_73_tdo top_tb.uut.boundary_cell_74_tdo }
 
-set _session_group_8 Group3
-gui_sg_create "$_session_group_8"
-set Group3 "$_session_group_8"
+set _session_group_139 Group3
+gui_sg_create "$_session_group_139"
+set Group3 "$_session_group_139"
 
-gui_sg_addsignal -group "$_session_group_8" { top_tb.uut.u_tapcontroller.TCK top_tb.uut.u_tapcontroller.TRST top_tb.uut.u_tapcontroller.TMS top_tb.uut.u_tapcontroller.clockdr top_tb.uut.u_tapcontroller.shiftdr top_tb.uut.u_tapcontroller.updatedr top_tb.uut.u_tapcontroller.clockir top_tb.uut.u_tapcontroller.shiftir top_tb.uut.u_tapcontroller.sir top_tb.uut.u_tapcontroller.updateir top_tb.uut.u_tapcontroller.select top_tb.uut.u_tapcontroller.bs_en top_tb.uut.u_tapcontroller.ps3 top_tb.uut.u_tapcontroller.ps2 top_tb.uut.u_tapcontroller.ps1 top_tb.uut.u_tapcontroller.ps0 top_tb.uut.u_tapcontroller.nps3 top_tb.uut.u_tapcontroller.nps2 top_tb.uut.u_tapcontroller.nps1 top_tb.uut.u_tapcontroller.nps0 top_tb.uut.u_tapcontroller.ns3 top_tb.uut.u_tapcontroller.ns2 top_tb.uut.u_tapcontroller.ns1 top_tb.uut.u_tapcontroller.ns0 top_tb.uut.u_tapcontroller.nTMS top_tb.uut.u_tapcontroller.nTCK top_tb.uut.u_tapcontroller.w30 top_tb.uut.u_tapcontroller.w31 top_tb.uut.u_tapcontroller.w32 top_tb.uut.u_tapcontroller.w33 top_tb.uut.u_tapcontroller.w34 top_tb.uut.u_tapcontroller.w35 top_tb.uut.u_tapcontroller.w20 top_tb.uut.u_tapcontroller.w21 top_tb.uut.u_tapcontroller.w22 top_tb.uut.u_tapcontroller.w23 top_tb.uut.u_tapcontroller.w10 top_tb.uut.u_tapcontroller.w11 top_tb.uut.u_tapcontroller.w12 top_tb.uut.u_tapcontroller.w00 top_tb.uut.u_tapcontroller.w01 top_tb.uut.u_tapcontroller.w02 top_tb.uut.u_tapcontroller.w03 top_tb.uut.u_tapcontroller.w04 top_tb.uut.u_tapcontroller.w05 top_tb.uut.u_tapcontroller.w06 top_tb.uut.u_tapcontroller.w07 top_tb.uut.u_tapcontroller.w08 top_tb.uut.u_tapcontroller.w0 top_tb.uut.u_tapcontroller.w1 top_tb.uut.u_tapcontroller.w2 top_tb.uut.u_tapcontroller.w3 top_tb.uut.u_tapcontroller.clockdreg top_tb.uut.u_tapcontroller.bsen }
+gui_sg_addsignal -group "$_session_group_139" { top_tb.uut.boundary_cell_1.Systemdata top_tb.uut.boundary_cell_1.TDI top_tb.uut.boundary_cell_1.Clock top_tb.uut.boundary_cell_1.Update top_tb.uut.boundary_cell_1.Test_or_Normal top_tb.uut.boundary_cell_1.Shift_or_Load top_tb.uut.boundary_cell_1.TDO top_tb.uut.boundary_cell_1.out top_tb.uut.boundary_cell_1.g1 top_tb.uut.boundary_cell_1.g2 top_tb.uut.boundary_cell_1.g3 }
 
-set _session_group_9 Group4
-gui_sg_create "$_session_group_9"
-set Group4 "$_session_group_9"
+set _session_group_140 Group4
+gui_sg_create "$_session_group_140"
+set Group4 "$_session_group_140"
 
-gui_sg_addsignal -group "$_session_group_9" { top_tb.uut.u_nstruction_register.DFF_0.CK top_tb.uut.u_nstruction_register.DFF_0.D top_tb.uut.u_nstruction_register.DFF_0.SI top_tb.uut.u_nstruction_register.DFF_0.SE top_tb.uut.u_nstruction_register.DFF_0.Q top_tb.uut.u_nstruction_register.DFF_0.a }
+gui_sg_addsignal -group "$_session_group_140" { top_tb.uut.boundary_cell_1.mux_2.out top_tb.uut.boundary_cell_1.mux_2.in0 top_tb.uut.boundary_cell_1.mux_2.in1 top_tb.uut.boundary_cell_1.mux_2.sel top_tb.uut.boundary_cell_1.mux_2.nsel top_tb.uut.boundary_cell_1.mux_2.w1 top_tb.uut.boundary_cell_1.mux_2.w0 }
+
+set _session_group_141 Group5
+gui_sg_create "$_session_group_141"
+set Group5 "$_session_group_141"
+
+gui_sg_addsignal -group "$_session_group_141" { top_tb.uut.boundary_cell_75.mux_2.out top_tb.uut.boundary_cell_75.mux_2.in0 top_tb.uut.boundary_cell_75.mux_2.in1 top_tb.uut.boundary_cell_75.mux_2.sel top_tb.uut.boundary_cell_75.mux_2.nsel top_tb.uut.boundary_cell_75.mux_2.w1 top_tb.uut.boundary_cell_75.mux_2.w0 }
+
+set _session_group_142 Group6
+gui_sg_create "$_session_group_142"
+set Group6 "$_session_group_142"
+
+gui_sg_addsignal -group "$_session_group_142" { top_tb.uut.boundary_cell_37.mux_2.out top_tb.uut.boundary_cell_37.mux_2.in0 top_tb.uut.boundary_cell_37.mux_2.in1 top_tb.uut.boundary_cell_37.mux_2.sel top_tb.uut.boundary_cell_37.mux_2.nsel top_tb.uut.boundary_cell_37.mux_2.w1 top_tb.uut.boundary_cell_37.mux_2.w0 }
+
+set _session_group_143 Group7
+gui_sg_create "$_session_group_143"
+set Group7 "$_session_group_143"
+
+gui_sg_addsignal -group "$_session_group_143" { top_tb.uut.boundary_cell_36.mux_2.out top_tb.uut.boundary_cell_36.mux_2.in0 top_tb.uut.boundary_cell_36.mux_2.in1 top_tb.uut.boundary_cell_36.mux_2.sel top_tb.uut.boundary_cell_36.mux_2.nsel top_tb.uut.boundary_cell_36.mux_2.w1 top_tb.uut.boundary_cell_36.mux_2.w0 }
+
+set _session_group_144 Group8
+gui_sg_create "$_session_group_144"
+set Group8 "$_session_group_144"
+
+gui_sg_addsignal -group "$_session_group_144" { top_tb.uut.s9234_scan_u.g89 }
+
+set _session_group_145 Group9
+gui_sg_create "$_session_group_145"
+set Group9 "$_session_group_145"
+
+gui_sg_addsignal -group "$_session_group_145" { top_tb.uut.g89 }
+
+set _session_group_146 Group10
+gui_sg_create "$_session_group_146"
+set Group10 "$_session_group_146"
+
+gui_sg_addsignal -group "$_session_group_146" { top_tb.uut.g89 }
+
+set _session_group_147 Group11
+gui_sg_create "$_session_group_147"
+set Group11 "$_session_group_147"
+
+gui_sg_addsignal -group "$_session_group_147" { top_tb.uut.boundary_cell_1.out }
+
+set _session_group_148 Group12
+gui_sg_create "$_session_group_148"
+set Group12 "$_session_group_148"
+
+gui_sg_addsignal -group "$_session_group_148" { top_tb.uut.instruction_register_tdo top_tb.uut.updatedr top_tb.uut.shift_interal_scan top_tb.uut.boundary_cell_1_tdo top_tb.uut.tdo_mux top_tb.uut.boundary_scan_en top_tb.uut.shiftir top_tb.uut.g89 top_tb.uut.shiftdr top_tb.uut.bs_en top_tb.uut.TDI top_tb.uut.boundary_scan_tdo top_tb.uut.test_data_registers_tdo top_tb.uut.boundary_cell_69_tdo top_tb.uut.clockir top_tb.uut.boundary_cell_74_tdo top_tb.uut.TDO top_tb.uut.TCK top_tb.uut.clockdr top_tb.uut.internal_scan_en top_tb.uut.internal_scan_en top_tb.uut.boundary_cell_73_tdo top_tb.uut.boundary_cell_72_tdo top_tb.uut.ir1 top_tb.uut.ir2 top_tb.uut.boundary_cell_71_tdo top_tb.uut.clockdr_bs top_tb.uut.CK top_tb.uut.boundary_cell_70_tdo top_tb.uut.select top_tb.uut.TMS top_tb.uut.by_pass_TCK top_tb.uut.shiftdr_bs top_tb.uut.updatedr_bs top_tb.uut.bypass_tdo top_tb.uut.TRST top_tb.uut.internal_scan_tdo top_tb.uut.bypass_en top_tb.uut.updateir }
+
+set _session_group_149 Group13
+gui_sg_create "$_session_group_149"
+set Group13 "$_session_group_149"
+
+gui_sg_addsignal -group "$_session_group_149" { top_tb.uut.s9234_scan_u.DFF_0.CK top_tb.uut.s9234_scan_u.DFF_0.D top_tb.uut.s9234_scan_u.DFF_0.SI top_tb.uut.s9234_scan_u.DFF_0.SE top_tb.uut.s9234_scan_u.DFF_0.Q top_tb.uut.s9234_scan_u.DFF_0.a }
+
+set _session_group_150 Group14
+gui_sg_create "$_session_group_150"
+set Group14 "$_session_group_150"
+
+gui_sg_addsignal -group "$_session_group_150" { top_tb.uut.s9234_scan_u.DFF_210.CK top_tb.uut.s9234_scan_u.DFF_210.D top_tb.uut.s9234_scan_u.DFF_210.SI top_tb.uut.s9234_scan_u.DFF_210.SE top_tb.uut.s9234_scan_u.DFF_210.Q top_tb.uut.s9234_scan_u.DFF_210.a }
+
+set _session_group_151 Group15
+gui_sg_create "$_session_group_151"
+set Group15 "$_session_group_151"
+
+gui_sg_addsignal -group "$_session_group_151" { top_tb.uut.s9234_scan_u.DFF_0.a top_tb.uut.s9234_scan_u.DFF_0.D top_tb.uut.s9234_scan_u.DFF_0.Q top_tb.uut.s9234_scan_u.DFF_0.CK top_tb.uut.s9234_scan_u.DFF_0.SE top_tb.uut.s9234_scan_u.DFF_0.SI }
 
 # Global: Highlighting
 
@@ -180,27 +244,27 @@ gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} top_tb}
 catch {gui_list_expand -id ${Hier.1} top_tb.uut}
-catch {gui_list_expand -id ${Hier.1} top_tb.uut.u_nstruction_register}
-catch {gui_list_select -id ${Hier.1} {top_tb.uut.u_nstruction_register.DFF_0}}
-gui_view_scroll -id ${Hier.1} -vertical -set 26
+catch {gui_list_expand -id ${Hier.1} top_tb.uut.s9234_scan_u}
+catch {gui_list_select -id ${Hier.1} {top_tb.uut.s9234_scan_u.DFF_0}}
+gui_view_scroll -id ${Hier.1} -vertical -set 4020
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {top_tb.uut.u_nstruction_register.DFF_0}
+gui_list_show_data -id ${Data.1} {top_tb.uut.s9234_scan_u.DFF_0}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {top_tb.uut.u_nstruction_register.DFF_0.CK top_tb.uut.u_nstruction_register.DFF_0.D top_tb.uut.u_nstruction_register.DFF_0.SI top_tb.uut.u_nstruction_register.DFF_0.SE top_tb.uut.u_nstruction_register.DFF_0.Q top_tb.uut.u_nstruction_register.DFF_0.a }}
+catch { gui_list_select -id ${Data.1} {top_tb.uut.s9234_scan_u.DFF_0.a top_tb.uut.s9234_scan_u.DFF_0.D top_tb.uut.s9234_scan_u.DFF_0.Q top_tb.uut.s9234_scan_u.DFF_0.CK top_tb.uut.s9234_scan_u.DFF_0.SE top_tb.uut.s9234_scan_u.DFF_0.SI }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
-gui_view_scroll -id ${Hier.1} -vertical -set 26
+gui_view_scroll -id ${Hier.1} -vertical -set 4020
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Source 'Source.1'
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
 gui_open_source -id ${Source.1}  -replace -active top_tb /afs/ece.cmu.edu/usr/zejiank/Private/ece765/project5_f24/zejian_kong_version/top_tb.v
-gui_view_scroll -id ${Source.1} -vertical -set 987
+gui_view_scroll -id ${Source.1} -vertical -set 4016
 gui_src_set_reusable -id ${Source.1}
 
 # View 'Wave.1'
@@ -211,9 +275,9 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 430
-gui_list_add_group -id ${Wave.1} -after {New Group} {Group2}
-gui_list_select -id ${Wave.1} {top_tb.uut.clockir }
+gui_wv_zoom_timerange -id ${Wave.1} 2096 2525
+gui_list_add_group -id ${Wave.1} -after {New Group} {Group12}
+gui_list_select -id ${Wave.1} {top_tb.uut.bypass_en }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -227,9 +291,9 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group2  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group12  -item top_tb.uut.internal_scan_en -position below
 
-gui_view_scroll -id ${Wave.1} -vertical -set 0
+gui_view_scroll -id ${Wave.1} -vertical -set 290
 gui_show_grid -id ${Wave.1} -enable false
 
 # View 'Wave.2'
@@ -240,12 +304,14 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.2} 0 430
-gui_list_add_group -id ${Wave.2} -after {New Group} {Group3}
-gui_list_select -id ${Wave.2} {top_tb.uut.u_tapcontroller.sir }
+gui_wv_zoom_timerange -id ${Wave.2} 2096 2524
+gui_list_add_group -id ${Wave.2} -after {New Group} {Group15}
+gui_list_select -id ${Wave.2} {top_tb.uut.s9234_scan_u.DFF_0.Q }
 gui_seek_criteria -id ${Wave.2} {Any Edge}
 
 
+
+gui_set_env TOGGLE::DEFAULT_WAVE_WINDOW ${Wave.2}
 gui_set_pref_value -category Wave -key exclusiveSG -value $groupExD
 gui_list_set_height -id Wave -height $origWaveHeight
 if {$origGroupCreationState} {
@@ -256,46 +322,12 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.2} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.2} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.2} -group Group3  -item top_tb.uut.u_tapcontroller.sir -position below
+gui_list_set_insertion_bar  -id ${Wave.2} -group Group15  -position in
 
 gui_view_scroll -id ${Wave.2} -vertical -set 0
 gui_show_grid -id ${Wave.2} -enable false
-
-# View 'Wave.3'
-gui_wv_sync -id ${Wave.3} -switch false
-set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
-gui_set_pref_value -category Wave -key exclusiveSG -value {false}
-set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
-gui_list_set_height -id Wave -height 25
-set origGroupCreationState [gui_list_create_group_when_add -wave]
-gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.3} 0 430
-gui_list_add_group -id ${Wave.3} -after {New Group} {Group4}
-gui_seek_criteria -id ${Wave.3} {Any Edge}
-
-
-
-gui_set_env TOGGLE::DEFAULT_WAVE_WINDOW ${Wave.3}
-gui_set_pref_value -category Wave -key exclusiveSG -value $groupExD
-gui_list_set_height -id Wave -height $origWaveHeight
-if {$origGroupCreationState} {
-	gui_list_create_group_when_add -wave -enable
-}
-if { $groupExD } {
- gui_msg_report -code DVWW028
-}
-gui_list_set_filter -id ${Wave.3} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
-gui_list_set_filter -id ${Wave.3} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.3} -group Group4  -position in
-
-gui_view_scroll -id ${Wave.3} -vertical -set 0
-gui_show_grid -id ${Wave.3} -enable false
 # Restore toplevel window zorder
 # The toplevel window could be closed if it has no view/pane
-if {[gui_exist_window -window ${TopLevel.2}]} {
-	gui_set_active_window -window ${TopLevel.2}
-	gui_set_active_window -window ${Wave.1}
-}
 if {[gui_exist_window -window ${TopLevel.3}]} {
 	gui_set_active_window -window ${TopLevel.3}
 	gui_set_active_window -window ${Wave.2}
@@ -305,9 +337,9 @@ if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${Source.1}
 	gui_set_active_window -window ${DLPane.1}
 }
-if {[gui_exist_window -window ${TopLevel.4}]} {
-	gui_set_active_window -window ${TopLevel.4}
-	gui_set_active_window -window ${Wave.3}
+if {[gui_exist_window -window ${TopLevel.2}]} {
+	gui_set_active_window -window ${TopLevel.2}
+	gui_set_active_window -window ${Wave.1}
 }
 #</Session>
 
