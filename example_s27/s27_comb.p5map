@@ -33,7 +33,7 @@ SCAN_PAIRS: G10+G5, G11+G6, G13+G7
 **	'CNTLA=1, CNTLB=1110, CNTLC=ABC'
 ** If value is not assigned for control signal the value '%' will be given
 CLOCKS: CK
-CONTROLS: scan_en=1110
+CONTROLS: scan_en=1110   
 
 
 ** How many filler vectors should print before stimulating PIs or reading POs?

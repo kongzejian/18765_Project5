@@ -98,3 +98,24 @@ module tapcontroller(TCK, TRST, TMS, clockdr, shiftdr, updatedr, clockir,
    dff DFF_6(bs_en, nTCK, bsen);
 
 endmodule // tapcontroller
+
+
+module dff(q, clock, data);
+   output reg q;
+   input clock;
+   input data;
+   always @(posedge clock) begin
+      q <= data;
+   end
+endmodule
+
+module dff_r(q, clock, reset, data);
+   output reg q;
+   input clock;
+   input data;
+   input reset;
+   always @(posedge clock or posedge reset) begin
+      if(reset) q <= 0;
+      else q <= data;
+   end
+endmodule

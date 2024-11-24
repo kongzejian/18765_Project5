@@ -16,7 +16,7 @@ with open("../verilog/s9234.v", "r") as file:
             flip_flop["data"] = flip_flop_data
             all_flip_flops.append(flip_flop)
 
-CLOCK = "CK"
+CLOCK = "clock_mux_out"
 SCAN_IN = "scan_in"
 SCAN_OUT = "scan_out"
 SCAN_ENA = "scan_en"

@@ -22,7 +22,7 @@ primitive udff(q, clock, data);
 endprimitive // u_dff
 
 
-`timescale 1ns / 1ps
+//`timescale 1ns / 1ps
 `celldefine
 module dff(clock, q, data);
    input clock, data;
@@ -37,3 +37,21 @@ module dff(clock, q, data);
 
 endmodule // udff
 `endcelldefine
+
+module dff_r (
+    input wire data,        
+    input wire clock,      
+    input wire reset,       
+    output wire q           
+);
+    wire reset_data;
+
+    assign reset_data = reset ? 1'b0 : data;
+
+    udff u1 (
+        q,
+        clock,
+        reset_data
+    );
+
+endmodule

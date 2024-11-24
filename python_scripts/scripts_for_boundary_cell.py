@@ -33,9 +33,9 @@ with open("boundary_cells", "w") as file:
         boundary_cell_string = "boundary_cell boundary_cell_"+str(boundary_cell_index)+"("
         boundary_cell_string += inputs_list[index]+"_in, "
         boundary_cell_string += TDI
-        boundary_cell_string += ", CK, Update, "
+        boundary_cell_string += ", clockdr_bs, updatedr_bs, "
         boundary_cell_string += TDO
-        boundary_cell_string += ", Shift_or_Load, Test_or_Normal, "
+        boundary_cell_string += ", shiftdr_bs, bs_en, "
         boundary_cell_string += inputs_list[index]+");"
         file.write(boundary_cell_string+"\n")
     for index in range(len(outputs_list)):
@@ -47,9 +47,9 @@ with open("boundary_cells", "w") as file:
         boundary_cell_string = "boundary_cell boundary_cell_"+str(boundary_cell_index)+"("
         boundary_cell_string += outputs_list[index]+", "
         boundary_cell_string += TDI
-        boundary_cell_string += " ,CK, Update, "
+        boundary_cell_string += " ,clockdr_bs, updatedr_bs, "
         boundary_cell_string += TDO
-        boundary_cell_string += ", Shift_or_Load, Test_or_Normal, "
+        boundary_cell_string += ", shiftdr_bs, bs_en, "
         boundary_cell_string += outputs_list[index]+"_out);"
         file.write(boundary_cell_string+"\n")
         if index == len(outputs_list) - 1:
